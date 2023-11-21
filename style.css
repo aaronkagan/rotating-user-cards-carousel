@@ -1,0 +1,127 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eff1f7;
+  font-family: sans-serif;
+}
+
+.main {
+  display: flex;
+  max-width: 1200px;
+}
+
+.card {
+  cursor: pointer;
+  width: 290px;
+  max-width: 95%;
+  border-radius: 0.8rem;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 0 30px 0 hsl(225, 33%, 95%);
+  transition: 0.5s ease;
+}
+
+.card.myrtie {
+  scale: 0.8;
+  transform: translateX(5rem);
+  position: relative;
+}
+
+.card.blanche {
+  position: relative;
+  z-index: 1;
+}
+
+.card.laura {
+  scale: 0.8;
+  transform: translateX(-5rem);
+  position: relative;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  display: inline-block;
+  margin-top: 4rem;
+}
+
+.avatar.myrtie {
+  background-image: url(https://i.ibb.co/mvnr7Cz/myrtle.png);
+}
+
+.avatar.blanche {
+  background-image: url(https://i.ibb.co/S0sP7SJ/Screenshot-2023-11-21-at-11-00-52-AM.png);
+}
+
+.avatar.laura {
+  background-image: url(https://i.ibb.co/BNDdkc4/Screenshot-2023-11-21-at-11-06-59-AM.png);
+}
+
+.card-title {
+  color: #202637;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+.card-text {
+  color: hsl(228, 2%, 58%);
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+.card-link {
+  font: inherit;
+  text-decoration: none;
+  background-color: #748dff;
+  color: #fff;
+  width: 14.5rem;
+  height: 4.4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem auto 4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 10px -5px #748dff;
+}
+.inactive {
+  background-color: white;
+  color: #afaebb;
+  box-shadow: none;
+  border: 1px solid #afaebb;
+}
+@media all and (max-width: 700px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    max-width: 375px;
+    justify-content: center;
+    margin: 2rem 0;
+    gap: 2rem;
+  }
+  .card {
+    scale: 1 !important;
+    transform: translateX(0) !important;
+  }
+  .card-link {
+    background-color: #748dff;
+    color: #fff;
+    box-shadow: 0 10px 10px -5px #748dff;
+  }
+}
